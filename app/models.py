@@ -12,3 +12,4 @@ class RegistroFoco(Base):
     comentario=Column(String, nullable=False)
     categoria=Column(String)
     data_registro = Column(DateTime, default=lambda: datetime.now(UTC))
+    
