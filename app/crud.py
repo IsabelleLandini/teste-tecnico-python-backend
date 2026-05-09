@@ -13,3 +13,9 @@ def create_registro_foco(db, registro):
     db.refresh(novo_registro)
 
     return novo_registro
+
+def get_registros(db):
+    registros = db.query(RegistroFoco).all()
+
+    return registros
+ 

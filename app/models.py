@@ -1,4 +1,6 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, DateTime
+from datetime import datetime, UTC
+
 from app.database import Base
 
 class RegistroFoco(Base):
@@ -9,3 +11,4 @@ class RegistroFoco(Base):
     tempo_minutos=Column(Integer, nullable=False)
     comentario=Column(String, nullable=False)
     categoria=Column(String)
+    data_registro = Column(DateTime, default=lambda: datetime.now(UTC))
