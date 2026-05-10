@@ -6,3 +6,9 @@ class RegistroFocoCreate(BaseModel):
     tempo_minutos: int 
     comentario: str = ""
     categoria: Optional[str] = None
+
+class DiagnosticoResponse(BaseModel):
+    media_foco: float
+    tempo_total_focado: int
+    feedback: str
+    
