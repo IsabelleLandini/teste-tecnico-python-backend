@@ -3,6 +3,7 @@ from datetime import datetime, UTC
 
 from app.database import Base
 
+# Tabela principal que armazena sessões de foco do usuário
 class RegistroFoco(Base):
     __tablename__ = 'registros_foco'
 
